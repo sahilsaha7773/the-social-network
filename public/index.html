@@ -5,6 +5,8 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -40,4 +42,20 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    var j = 0;
+    const finalString = "Gateway";
+    var cl = 'G';
+    for ( var i = 0; i < finalString.length; i++ ) {
+        var ch = characters.charAt(Math.floor(Math.random() * charactersLength));
+        document.getElementById('h1').innerHTML(result+ch);
+        if(ch===finalString.charAt(j)){
+            result+=ch;
+            j++;
+        }
+    }
+  </script>
 </html>
