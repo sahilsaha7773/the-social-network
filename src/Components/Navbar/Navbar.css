@@ -1,0 +1,17 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px dashed green;
+    width: 97%;
+    z-index: 10000;
+    background-color: black;
+    top: 0;
+}
+
+.navbar__link {
+    color: rgb(21, 218, 21);
+    margin: 20px;
+    font-weight: 600;
+}

@@ -1,0 +1,74 @@
+.register__container {
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+}
+.register__card {
+    width: fit-content;
+    max-width: 450px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, 10%);
+}
+h1 {
+    color: rgb(21, 218, 21);
+    /* border: 2px dashed rgb(21, 218, 21); */
+    padding: 5px;
+}
+input {
+    display: block;
+    background-color:black;
+    border: 0px;
+    border: 2px solid rgb(21, 218, 21);
+    border-radius: 10px 0px;
+    color: rgb(21, 218, 21);
+    margin: auto;
+    padding:14px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+p {
+    color: rgb(21, 218, 21);
+    margin: 20px;
+}
+input:focus {
+    border: 2px solid rgb(21, 218, 21);
+    outline: 0px;
+}
+::placeholder {
+    color: rgb(21, 218, 21);
+}
+button {
+    font-size: 25px;
+    background-color: #000;
+    color:rgb(21, 218, 21);
+    border: 2px solid rgb(21, 218, 21);
+    padding:15px;
+    width: 100%;
+}
+button:hover {
+    background-color: rgb(21, 218, 21);
+    color: black;
+    cursor: pointer;
+}
+button:focus{
+    outline: 0px;
+    border: 2px solid rgb(21, 218, 21)yellow;
+}
+
+.register__form {
+    /* border: 2px dashed rgb(21, 218, 21); */
+    padding: 30px;
+}
+.register__heading {
+    animation: blinkTextCursor 1000ms steps(44) infinite normal;
+    width: fit-content;
+    margin: auto;
+}
+@keyframes blinkTextCursor{
+    from{border-right:4px solid rgb(21, 218, 21);}
+    to{border-right: 4px solid transparent;}
+}
