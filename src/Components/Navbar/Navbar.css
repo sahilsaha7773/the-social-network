@@ -15,3 +15,7 @@
     margin: 20px;
     font-weight: 600;
 }
+
+.logout_btn {
+    max-width: 125px;
+}
