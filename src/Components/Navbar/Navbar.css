@@ -16,6 +16,39 @@
     font-weight: 600;
 }
 
-.logout_btn {
-    max-width: 125px;
+.logout__btn {
+    width: fit-content;
+    font-size: 15px;
+}
+.navbar__right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__profile {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid green;
+    margin: 20px;
+    border-radius: 40px;
+    color: rgb(21, 218, 21);
+}
+
+.navbar__profileimg {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.navbar__profile:hover {
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid rgb(21, 218, 21);
+    margin: 20px;
+    border-radius: 40px;
+    background-color: rgb(21, 218, 21);
+    color: black !important;
 }

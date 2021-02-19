@@ -7,7 +7,7 @@ function Register() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
+    const [cookies, setCookie, removeCookie] = useCookies(['token']);
     const [user, setUser] = useContext(UserContext);
    // console.log("jkhjjk", user);
     function handleChange(e) {

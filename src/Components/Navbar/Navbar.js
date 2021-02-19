@@ -18,9 +18,13 @@ function Navbar() {
                                 <h1>The Social Network</h1>
                             </div>
                             <div className="navbar__right">
-                                <p>Logged in as {user[0].username}</p>
+                                <Link className="navbar__profile" to='/profile'>
+                                        <img src={user[0].img} className="navbar__profileimg"/>
+                                        {user[0].username}
+                                </Link>
+                                
+                                <button className="logout__btn" onClick={handleLogout}>Logout</button>
                             </div>
-                            <button className="logout__btn" onClick={handleLogout}>Logout</button>
                         </div>
                     )
                     

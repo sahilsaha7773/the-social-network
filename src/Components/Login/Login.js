@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Redirect } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 import UserContext from '../../context/UserContext';
 import './Login.css';
 
@@ -7,6 +8,7 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [user, setUser] = useContext(UserContext);
+    const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
     function handleChange(e) {
         if(e.target.name==="email")
@@ -27,6 +29,7 @@ function Login() {
         fetch('http://localhost:4000/user/login', requestOptions)
         .then(response => response.json())
         .then(data => {
+            setCookie("token", data.token);
             fetch("http://localhost:4000/user/me", {
                 method: "GET",
                 headers: {'token': data.token},

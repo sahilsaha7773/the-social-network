@@ -6,7 +6,7 @@
     margin: auto;
     /* top: 120px; */
 }
-p{
+.post__para{
     color: rgb(21, 218, 21) !important; 
 }
 .post__header {

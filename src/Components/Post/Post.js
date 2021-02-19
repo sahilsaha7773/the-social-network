@@ -8,10 +8,10 @@ function Post({author, caption, imgUrl}) {
             <div className="post__content">
                 <div className="post__header">
                     <img src={author.profilePhoto} className="post__dp"/>
-                    <p>{author.username}</p>
+                    <p className="post__para">{author.username}</p>
                 </div>
                 <div className="post__body">
-                    <p className="post__caption">{caption}</p>
+                    <p className="post__caption post__para">{caption}</p>
                     <div className="post__imageContainer">
                         <img src={imgUrl} className="post__image"/>
                     </div>

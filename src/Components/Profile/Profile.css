@@ -3,3 +3,19 @@
     margin-top: 150px;
     font-size: 20px;
 }
+
+.upload__btn {
+    max-width: 140px;
+}
+
+.profile__photo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 100px;
+    border: 2px solid green;
+}
+
+.upload__area {
+    font-size: 20px;
+}
