@@ -7,6 +7,8 @@ function Register() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [cookies, setCookie, removeCookie] = useCookies(['token']);
     const [user, setUser] = useContext(UserContext);
    // console.log("jkhjjk", user);
@@ -17,14 +19,21 @@ function Register() {
             setPassword(e.target.value);
         else if(e.target.name==="email")
             setEmail(e.target.value);
+        else if(e.target.name==="firstName")
+            setFirstName(e.target.value)
+        else if(e.target.name==="lastName")
+            setLastName(e.target.value);
     }
     
     function handleSignUp(e) {
+        console.log(firstName, lastName);
         const requestOptions = {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 username: username,
+                firstName: firstName,
+                lastName: lastName,
                 email: email,
                 password: password
             })
@@ -61,6 +70,8 @@ function Register() {
                                 <h1 className="register__heading" id="h1">Gateway to . . .</h1> 
                                 <form className="register__form">
                                     <input type="text" name="username" value={username} onChange={handleChange} placeholder="Enter your fake name"/>
+                                    <input type="text" name="firstName" value={firstName} onChange={handleChange} placeholder="First name"/>
+                                    <input type="text" name="lastName" value={lastName} onChange={handleChange} placeholder="Last name"/>
                                     <input type="email" name="email" value={email} onChange={handleChange} placeholder="Enter your email address"/>
                                     <input type="password" name="password" value={password} onChange={handleChange} placeholder="Your top secret password"/>
                                 </form>

@@ -1,8 +1,15 @@
 body {
   background-color: black;
-
+  font-weight: 700;
   margin: 20px;
+}
+.main {
+  margin-top: 140px;
 }
 * {
   font-family: Orbitron;
+}
+
+.main__content {
+  margin-left: 200px;
 }

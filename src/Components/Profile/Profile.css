@@ -2,6 +2,8 @@
     text-align: center;
     margin-top: 150px;
     font-size: 20px;
+    width: fit-content;
+    margin: 150px auto;
 }
 
 .upload__btn {
@@ -15,7 +17,50 @@
     border-radius: 100px;
     border: 2px solid green;
 }
-
+.bio {
+    background-color: #000;
+    color: rgb(21, 218, 21);
+    margin: 20px auto;
+    font-size: 20px;
+    padding: 20px;
+    border: 2px solid;
+    width: fit-content;
+}
 .upload__area {
     font-size: 20px;
+    width:300px;
+}
+textarea:focus {
+    border: 2px solid rgb(21, 218, 21);
+    outline: 0px;
+}
+
+.profile__form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 400px; */
+    /* justify-content: center; */
+    margin: auto;
+    align-items: center;
+}
+
+h2 {
+    color: #15da15;
+    margin-bottom: 1px;
+    font-weight: 700;
+}
+
+.about__info {
+    display: flex;
+    align-items: center;
+    justify-content:left;
+}
+
+.about__p {
+    margin: 0px 5px;
+}
+
+.profile__about {
+    text-align: left;
 }

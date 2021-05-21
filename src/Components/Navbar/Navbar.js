@@ -2,10 +2,13 @@ import React, {useState, useEffect, useContext} from 'react'
 import './Navbar.css';
 import {Link, useLocation} from 'react-router-dom'
 import UserContext from '../../context/UserContext';
+import Cookies from 'js-cookie';
+
 function Navbar() {
     const [user, setUser] = useContext(UserContext);
     function handleLogout(){
         setUser({});
+        Cookies.remove('token');
     }
     const locationPath = useLocation().pathname;
     return (
