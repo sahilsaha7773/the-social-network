@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar/Sidebar'
 import Stories from '../Stories/Stories';
 import './Home.css';
 import Cookies from 'js-cookie';
-
+import config from '../../config';
 function Home() {
     //const [user, setUser] = useContext(UserContext);
     const [feed, setFeed] = useState([]);
@@ -35,7 +35,7 @@ function Home() {
             method: 'GET',
             headers: {'token': Cookies.get('token')}
         }
-        fetch("http://localhost:4000/post/getFeed", requestOptions)
+        fetch(config.APIURL+"/post/getFeed", requestOptions)
         .then((response) => response.json())
         .then(data => {
             console.log(data);
@@ -63,7 +63,7 @@ function Home() {
                 image: imgdata
             }) 
         }
-        fetch("http://localhost:4000/post/createPost", requestOptions)
+        fetch(config.APIURL+"/post/createPost", requestOptions)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -71,7 +71,7 @@ function Home() {
                 method: 'GET',
                 headers: {'token': Cookies.get('token')}
             }
-            fetch("http://localhost:4000/post/getFeed", requestOptions2)
+            fetch(config.APIURL+"/post/getFeed", requestOptions2)
             .then((response) => response.json())
             .then(data => {
                 console.log(data);

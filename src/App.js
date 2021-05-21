@@ -21,13 +21,15 @@ import { CookiesProvider } from 'react-cookie';
 import Cookies from 'js-cookie';
 import { People } from '@material-ui/icons';
 import Requests from './Components/Requests/Requests';
+//import config from 'dotenv';
+import config from './config';
 
 function App() {
   const [user, setUser] = useState({});
   useEffect(() => {
     if(!user._id){  
       const token = Cookies.get('token');
-      fetch("http://localhost:4000/user/me", {
+      fetch(config.APIURL+"/user/me", {
           method: "GET",
           headers: {'token': token},
       })

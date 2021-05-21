@@ -6,7 +6,7 @@ import './Profile.css';
 import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
 import { Flight, HomeOutlined } from '@material-ui/icons';
-
+import config from '../../config';
 function Profile() {
     const [user, setUser] = useContext(UserContext);
     

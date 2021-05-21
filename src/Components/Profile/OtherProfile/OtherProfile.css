@@ -1,0 +1,7 @@
+.req {
+    display: flex;
+}
+
+.req__btn {
+    margin: 10px;
+}

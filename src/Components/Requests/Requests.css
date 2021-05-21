@@ -1,0 +1,33 @@
+.req__container {
+    margin-top: 150px;
+    /* grid-row: 1; */
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    /* max-width: 50%; */
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+.req__row {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 20px;
+    /* border: 2px solid #6ddb2d; */
+    border-radius: 20px;
+    border-bottom: 2px solid rgb(21, 218, 21);
+    border-top: 2px solid rgb(21, 218, 21);
+    width: 400px;
+    margin: 20px;
+}
+
+.req__info {
+    text-align: left;
+    font-size: 19px;
+}
+
+.req__photo {
+    width: 100px;
+    height: 100px;
+}

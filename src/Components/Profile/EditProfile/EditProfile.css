@@ -1,0 +1,65 @@
+.profile__container {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 20px;
+}
+
+.upload__btn {
+    max-width: 140px;
+}
+
+.profile__photo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 100px;
+    border: 2px solid green;
+}
+.bio__field {
+    background-color: #000;
+    color: rgb(21, 218, 21);
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 20px;
+    border: 2px solid;
+}
+.upload__area {
+    font-size: 20px;
+    width:300px;
+}
+textarea:focus {
+    border: 2px solid rgb(21, 218, 21);
+    outline: 0px;
+}
+
+.profile__form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 400px; */
+    /* justify-content: center; */
+    margin: auto;
+    align-items: center;
+}
+
+h2 {
+    color: #15da15;
+    margin-bottom: 1px;
+    font-weight: 700;
+}
+
+.edit__field {
+    font-size: 20px;
+}
+
+.about__info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.about__icon {
+    color: rgb(21, 218, 21) !important;
+    font-size: 30px !important;
+    margin-right: 5px;
+}

@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import UserContext from '../../context/UserContext';
+import config from '../../config';
 import './Login.css';
 
 function Login() {
@@ -30,7 +31,7 @@ function Login() {
         .then(response => response.json())
         .then(data => {
             setCookie("token", data.token);
-            fetch("http://localhost:4000/user/me", {
+            fetch(config.APIURL+"/user/me", {
                 method: "GET",
                 headers: {'token': data.token},
             })

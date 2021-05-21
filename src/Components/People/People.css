@@ -1,0 +1,26 @@
+.people__container {
+    margin-top: 150px;
+    justify-content:center;
+    display: flex;
+}
+
+.people__img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 100px;
+    border: 2px solid green;
+}
+
+.people__box {
+    text-align: center;
+    margin: 20px;
+    border: 3px solid #6ddb2d;
+    padding: 20px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.save__btn {
+    width: fit-content;
+}

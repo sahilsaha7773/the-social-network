@@ -3,6 +3,7 @@ import { useCookies } from 'react-cookie';
 import { Redirect } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
 import './Register.css';
+import config from '../../config';
 function Register() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -38,13 +39,13 @@ function Register() {
                 password: password
             })
         }
-        fetch("http://localhost:4000/user/signup", requestOptions)
+        fetch(config.APIURL+"/user/signup", requestOptions)
         .then(response => response.json())
         .then(data => {
             setCookie("token", data.token);
             console.log(user);
             //console.log(data)
-            fetch("http://localhost:4000/user/me", {
+            fetch(config.APIURL+"/user/me", {
                 method: "GET",
                 headers: {'token': data.token},
             })
