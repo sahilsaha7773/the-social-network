@@ -27,7 +27,7 @@ function Login() {
                 password: password
             })
         }
-        fetch('http://localhost:4000/user/login', requestOptions)
+        fetch(config.APIURL+'/user/login', requestOptions)
         .then(response => response.json())
         .then(data => {
             setCookie("token", data.token);
